@@ -1,90 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Independence Day</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            background-color: #f0f0f0;
-            background-image: url("bg.jpg");
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Independence Day</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background-color: #f0f0f0;
+      background-image: url("bg.jpg");
+    }
 
-        .message-container {
-            text-align: center;
-            padding: 50px;
-            background-color: #fff;
-            border-radius: 15px;
-            box-shadow: 0 6px 35px rgba(0.3, 0.3, 0.3, 0.3);
-        }
+    .message-container {
+      text-align: center;
+      padding: 50px;
+      background-color: #fff;
+      border-radius: 15px;
+      box-shadow: 0 6px 35px rgba(0.3, 0.3, 0.3, 0.3);
+    }
 
-        h1 {
-            font-size: 3em;
-            margin-bottom: 20px;
-        }
+    h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+    }
 
-        /* Color the individual words */
-        h1 span.happy {
-            color: #FF9933; /* Orange */
-        }
+    /* Color the individual words */
+    h1 span.happy {
+      color: #FF9933; /* Orange */
+    }
 
-        h1 span.independence {
-            color: #fff; /* White */
-            text-shadow: 0 0 10px #00f; /* Add blue glow */
-        }
+    h1 span.independence {
+      color: #fff; /* White */
+      text-shadow: 0 0 10px #00f; /* Add blue glow */
+    }
 
-        h1 span.day {
-            color: #138808; /* Green */
-        }
+    h1 span.day {
+      color: #138808; /* Green */
+    }
 
-        p {
-            font-size: 1.5em;
-            line-height: 1.5;
-        }
+    p {
+      font-size: 1.5em;
+      line-height: 1.5;
+    }
 
-        .flag-colors {
-            margin-top: 30px;
-        }
+    video {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px; /* Optional: Add rounded corners */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+    }
 
-        .color-box {
-            width: 100px;
-            height: 100px;
-            display: inline-block;
-            margin: 10px;
-            border: 1px solid #000;
-        }
+    /* Media query for smaller screens */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2em;
+      }
 
-        .saffron {
-            background-color: #FF9933;
-        }
+      p {
+        font-size: 1em;
+      }
 
-        .white {
-            background-color: #fff;
-        }
+      .message-container {
+        padding: 20px;
+      }
 
-        .green {
-            background-color: #138808;
-        }
-    </style>
+      video {
+        max-width: 90%; /* Adjust as needed */
+      }
+    }
+  </style>
 </head>
 <body>
-    <audio id="myAudio" autoplay loop>
-        <source src="flag.m4a" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
-    <div class="message-container">
-        <h1>
-            <span class="happy">Happy</span> <span class="independence">Independence</span> <span class="day">Day</span>
-        </h1>
-       <h2>
-        <p><b>By Ajay Kattimani</b></p>
-      </h2>
-    </div>
+  <audio id="myAudio" autoplay loop>
+    <source src="flag.m4a" type="audio/mpeg"> Your browser does not support the audio element.
+  </audio>
+  <div class="message-container">
+    <h1> <span class="happy">Happy</span> <span class="independence">Independence</span> <span class="day">Day</span> </h1>
+    <h2>
+      <p><b>By Ajay Kattimani</b></p>
+    </h2>
+    <video width="100%" controls autoplay muted loop>
+      <source src="flag.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
 </body>
 </html>
