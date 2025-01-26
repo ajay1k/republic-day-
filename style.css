@@ -1,0 +1,194 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1000px;
+  background: url('your-background-image.jpg') no-repeat center center fixed;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.container {
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  transform-style: preserve-3d;
+  min-height: 500px;
+  width: 750px;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  animation: wave-flag 3s linear infinite;
+  position: relative; /* Add this to position the flower container */
+}
+
+@keyframes wave-flag {
+  0% {
+      transform: rotate(0deg);
+  }
+  25% {
+      transform: rotate(5deg);
+  }
+  50% {
+      transform: rotate(0deg);
+  }
+  75% {
+      transform: rotate(-5deg);
+  }
+  100% {
+      transform: rotate(0deg);
+  }
+}
+
+.saf {
+  width: 100%;
+  height: 166.6px;
+  background-color: #FF9933;
+  background-image: url("saffron-texture.jpg");
+  background-size: cover;
+}
+
+.grn {
+  width: 100%;
+  height: 166.6px;
+  background-color: #138808;
+  background-image: url("green-texture.jpg");
+  background-size: cover;
+}
+
+.ch {
+  background-color: #ffffff;
+  min-height: 166.7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("white-texture.jpg");
+  background-size: cover;
+}
+
+.ch img {
+  width: 150px;
+  z-index: 2;
+  transition: all 1.5s ease-out;
+}
+
+.info {
+  position: absolute;
+  bottom: -80px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.title {
+  transition: all 0.5s ease-out;
+  font-size: 2em;
+  color: #000000;
+  text-shadow: 2px 2px 4px #fcfcfc;
+  transform: translateZ(0px);
+}
+
+.confetti {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.confetti div {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #f00;
+  opacity: 0.8;
+  border-radius: 50%;
+  animation: confetti-fall 3s linear forwards;
+}
+
+@keyframes confetti-fall {
+  0% {
+      transform: translateY(-10px) rotate(0deg);
+      opacity: 1;
+  }
+  100% {
+      transform: translateY(100vh) rotate(720deg);
+      opacity: 0;
+  }
+}
+
+.confetti div:nth-child(1) {
+  left: 5%;
+  animation-delay: 0.5s;
+  background-color: #0f0;
+}
+
+.confetti div:nth-child(2) {
+  left: 15%;
+  animation-delay: 1.5s;
+  background-color: #00f;
+}
+
+.confetti div:nth-child(3) {
+  left: 25%;
+  animation-delay: 1s;
+  background-color: #f0f;
+}
+
+/* ... (rest of the confetti styles) ... */
+
+/* Flower styles */
+.flower-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1; /* Ensure flowers are above the flag */
+}
+
+.flower {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  opacity: 0;
+  animation: flower-fall 5s linear forwards;
+}
+
+.saffron {
+  background-color: #FF9933;
+}
+
+.white {
+  background-color: #fff;
+}
+
+.green {
+  background-color: #138808;
+}
+
+@keyframes flower-fall {
+  0% {
+      transform: translateY(-20px) scale(0);
+      opacity: 1;
+  }
+  100% {
+      transform: translateY(100vh) scale(1) rotate(720deg);
+      opacity: 0;
+  }
+}
